@@ -217,12 +217,12 @@ class _TrackRequestsScreenState extends State<TrackRequestsScreen> with SingleTi
         borderRadius: BorderRadius.circular(16),
       ),
       elevation: 4,
-      shadowColor: Colors.black.withOpacity(0.1),
+      shadowColor: Colors.black.withValues(alpha: 0.1),
       child: ExpansionTile(
         tilePadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
         leading: CircleAvatar(
-          backgroundColor: statusColor.withOpacity(0.2),
+          backgroundColor: statusColor.withValues(alpha: 0.2),
           child: Icon(
             statusIcon,
             color: statusColor,
@@ -245,7 +245,7 @@ class _TrackRequestsScreenState extends State<TrackRequestsScreen> with SingleTi
                 vertical: 4,
               ),
               decoration: BoxDecoration(
-                color: statusColor.withOpacity(0.1),
+                color: statusColor.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(color: statusColor),
               ),

@@ -51,7 +51,7 @@ class NotificationBanner extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: AppTheme.softGreen.withOpacity(0.3),
+                  color: AppTheme.softGreen.withValues(alpha: 0.3),
                   shape: BoxShape.circle,
                 ),
                 child: const Icon(

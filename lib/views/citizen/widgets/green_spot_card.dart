@@ -10,12 +10,12 @@ class GreenSpotCard extends StatelessWidget {
   final Function(String) onViewMap;
 
   const GreenSpotCard({
-    Key? key, 
+    super.key,
     required this.title,
     required this.distance,
     required this.icon,
     required this.onViewMap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class GreenSpotCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -41,7 +41,7 @@ class GreenSpotCard extends StatelessWidget {
               Container(
                 height: 100,
                 decoration: BoxDecoration(
-                  color: AppTheme.softGreen.withOpacity(0.3),
+                  color: AppTheme.softGreen.withValues(alpha: 0.3),
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),

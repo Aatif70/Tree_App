@@ -3,7 +3,7 @@ import 'package:tree_app/constants/app_theme.dart';
 import 'package:tree_app/views/citizen/widgets/green_spot_card.dart';
 
 class NearbyGreenSpots extends StatelessWidget {
-  const NearbyGreenSpots({Key? key}) : super(key: key);
+  const NearbyGreenSpots({super.key});
 
   @override
   Widget build(BuildContext context) {

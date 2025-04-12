@@ -7,10 +7,10 @@ class GradientBackground extends StatelessWidget {
   final LinearGradient gradient;
 
   const GradientBackground({
-    Key? key,
+    super.key,
     required this.child,
     this.gradient = AppTheme.splashGradient,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,17 +28,17 @@ class RoleCard extends StatelessWidget {
   final VoidCallback onTap;
 
   const RoleCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.icon,
     required this.color,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: color.withOpacity(0.9),
+      color: color.withValues(alpha: 0.9),
       margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       child: InkWell(
         onTap: () {
@@ -73,17 +73,17 @@ class ActionCard extends StatelessWidget {
   final Color color;
 
   const ActionCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.icon,
     required this.onTap,
     this.color = AppTheme.softGreen,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: color.withOpacity(0.8),
+      color: color.withValues(alpha: 0.8),
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(20),
@@ -120,11 +120,11 @@ class TreeGuardAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget>? actions;
 
   const TreeGuardAppBar({
-    Key? key,
+    super.key,
     required this.title,
     this.showBackButton = true,
     this.actions,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -154,14 +154,14 @@ class CustomTextField extends StatelessWidget {
   final String? Function(String?)? validator;
 
   const CustomTextField({
-    Key? key,
+    super.key,
     required this.label,
     required this.hint,
     required this.controller,
     this.keyboardType = TextInputType.text,
     this.obscureText = false,
     this.validator,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

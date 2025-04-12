@@ -98,7 +98,7 @@ class AppTheme {
             borderRadius: BorderRadius.circular(20),
           ),
           elevation: 4,
-          shadowColor: Colors.black.withOpacity(0.1),
+          shadowColor: Colors.black.withValues(alpha: 0.1),
         ),
       );
 } 

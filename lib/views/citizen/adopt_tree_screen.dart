@@ -201,7 +201,7 @@ class _AdoptTreeScreenState extends State<AdoptTreeScreen> {
         borderRadius: BorderRadius.circular(16),
       ),
       elevation: 4,
-      shadowColor: Colors.black.withOpacity(0.1),
+      shadowColor: Colors.black.withValues(alpha: 0.1),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

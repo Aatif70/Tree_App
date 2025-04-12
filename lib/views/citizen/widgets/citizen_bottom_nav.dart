@@ -9,11 +9,11 @@ class CitizenBottomNav extends StatelessWidget {
   final VoidCallback onAdoptComplete;
 
   const CitizenBottomNav({
-    Key? key,
+    super.key,
     required this.currentIndex,
     required this.onTap,
     required this.onAdoptComplete,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class CitizenBottomNav extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, -2),
           ),

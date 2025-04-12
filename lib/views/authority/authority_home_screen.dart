@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tree_app/constants/app_theme.dart';
-import 'package:tree_app/utils/widgets.dart';
 import 'package:tree_app/view_models/auth_view_model.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -41,7 +40,7 @@ class _AuthorityHomeScreenState extends State<AuthorityHomeScreen> {
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
+                  color: Colors.black.withValues(alpha: 0.1),
                   offset: const Offset(0, 3),
                   blurRadius: 10,
                 ),
@@ -164,7 +163,7 @@ class _AuthorityHomeScreenState extends State<AuthorityHomeScreen> {
             width: double.infinity,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: AppTheme.softGreen.withOpacity(0.3),
+              color: AppTheme.softGreen.withValues(alpha: 0.3),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
                 color: const Color(0xFF4CAF50),
@@ -314,8 +313,8 @@ class _AuthorityHomeScreenState extends State<AuthorityHomeScreen> {
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors: [
-                  AppTheme.darkGreen.withOpacity(0.05),
-                  AppTheme.softGreen.withOpacity(0.15),
+                  AppTheme.darkGreen.withValues(alpha: 0.05),
+                  AppTheme.softGreen.withValues(alpha: 0.15),
                 ],
               ),
             ),
@@ -324,7 +323,7 @@ class _AuthorityHomeScreenState extends State<AuthorityHomeScreen> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF4CAF50).withOpacity(0.1),
+                    color: const Color(0xFF4CAF50).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Icon(

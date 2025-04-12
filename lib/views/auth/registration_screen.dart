@@ -134,7 +134,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 backgroundColor: AppTheme.darkGreen,
                                 foregroundColor: AppTheme.white,
                                 disabledBackgroundColor:
-                                    AppTheme.darkGreen.withOpacity(0.5),
+                                    AppTheme.darkGreen.withValues(alpha: 0.5),
                                 padding: const EdgeInsets.symmetric(vertical: 16),
                               ),
                               child: authViewModel.isLoading

@@ -19,7 +19,7 @@ class RoleSelectionScreen extends StatelessWidget {
             image: const AssetImage('assets/images/forest_bg.jpg'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.3),
+              Colors.black.withValues(alpha: 0.3),
               BlendMode.darken,
             ),
           ),
@@ -30,8 +30,8 @@ class RoleSelectionScreen extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                AppTheme.darkGreen.withOpacity(0.6),
-                AppTheme.softGreen.withOpacity(0.8),
+                AppTheme.darkGreen.withValues(alpha: 0.6),
+                AppTheme.softGreen.withValues(alpha: 0.8),
               ],
             ),
           ),
