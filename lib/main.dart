@@ -5,13 +5,13 @@ import 'package:tree_app/constants/app_theme.dart';
 import 'package:tree_app/services/tree_prefs_service.dart';
 import 'package:tree_app/utils/routes.dart';
 import 'package:tree_app/view_models/auth_view_model.dart';
-import 'package:tree_app/views/authority_home_screen.dart';
-import 'package:tree_app/views/citizen_home_screen.dart';
-import 'package:tree_app/views/login_screen.dart';
-import 'package:tree_app/views/officer_home_screen.dart';
-import 'package:tree_app/views/registration_screen.dart';
-import 'package:tree_app/views/role_selection_screen.dart';
-import 'package:tree_app/views/splash_screen.dart';
+import 'package:tree_app/views/authority/authority_home_screen.dart';
+import 'package:tree_app/views/citizen/citizen_home_screen.dart';
+import 'package:tree_app/views/auth//login_screen.dart';
+import 'package:tree_app/views/officer/officer_home_screen.dart';
+import 'package:tree_app/views/auth/registration_screen.dart';
+import 'package:tree_app/views/common/role_selection_screen.dart';
+import 'package:tree_app/views/auth/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
