@@ -44,6 +44,9 @@ dependencies:
   
   # For fonts
   google_fonts: ^6.1.0
+  
+  # For local storage
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:

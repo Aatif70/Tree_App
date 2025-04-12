@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:tree_app/constants/app_theme.dart';
+import 'package:tree_app/services/tree_prefs_service.dart';
 import 'package:tree_app/utils/routes.dart';
 import 'package:tree_app/view_models/auth_view_model.dart';
 import 'package:tree_app/views/authority_home_screen.dart';
@@ -11,7 +13,15 @@ import 'package:tree_app/views/registration_screen.dart';
 import 'package:tree_app/views/role_selection_screen.dart';
 import 'package:tree_app/views/splash_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  // Set to use local font files instead of downloading from Google Fonts
+  GoogleFonts.config.allowRuntimeFetching = false;
+  
+  // Initialize shared preferences
+  await TreePrefsService.initializePrefs();
+  
   runApp(const MyApp());
 }
 
