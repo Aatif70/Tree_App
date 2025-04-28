@@ -80,7 +80,7 @@ class ActionCard extends StatelessWidget {
                         );
                       },
                     );
-                  }).toList(),
+                  })
                 ],
               ),
             );

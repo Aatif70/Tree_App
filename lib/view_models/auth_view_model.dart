@@ -29,7 +29,12 @@ class AuthViewModel extends ChangeNotifier {
 
     bool success = false;
     String? mockId = DateTime.now().millisecondsSinceEpoch.toString();
-    
+
+
+
+
+
+
     switch (_currentUser.role) {
       case UserRole.citizen:
         // For citizens, identifier is phone number or email

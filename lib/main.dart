@@ -26,7 +26,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key}); // recheck karna padega
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         title: 'TreeGuard',
         theme: AppTheme.theme,
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.splash,
+        initialRoute: Routes.splash, // Splash screen route
         onGenerateRoute: (settings) {
           switch (settings.name) {
             case Routes.splash:
@@ -49,6 +49,8 @@ class MyApp extends StatelessWidget {
               return MaterialPageRoute(builder: (_) => const LoginScreen());
             case Routes.register:
               return MaterialPageRoute(builder: (_) => const RegistrationScreen());
+
+              // main home screens
             case Routes.citizenHome:
               return MaterialPageRoute(builder: (_) => const CitizenHomeScreen());
             case Routes.officerHome:

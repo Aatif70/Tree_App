@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tree_app/constants/app_theme.dart';
 
 class PlantationProofScreen extends StatefulWidget {
-  const PlantationProofScreen({Key? key}) : super(key: key);
+  const PlantationProofScreen({super.key});
 
   @override
   State<PlantationProofScreen> createState() => _PlantationProofScreenState();
@@ -22,6 +22,11 @@ class _PlantationProofScreenState extends State<PlantationProofScreen> {
     'Pine',
     'Maple',
     'Banyan',
+    'Gulmohar',
+    'Mango',
+    'Peepal',
+    'Orange',
+    'Eucalyptus',
     'Other'
   ];
 

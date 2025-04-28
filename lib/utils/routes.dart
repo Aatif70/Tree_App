@@ -13,6 +13,8 @@ class Routes {
 class RouteManager {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
+
+
       // Routes will be implemented when creating the views
       default:
         return MaterialPageRoute(
@@ -22,6 +24,8 @@ class RouteManager {
             ),
           ),
         );
+
+
     }
   }
 } 

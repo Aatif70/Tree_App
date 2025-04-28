@@ -140,10 +140,13 @@ class RoleSelectionScreen extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('About TreeGuard'),
+        title: const Text('About TreeGuard',
+            style: TextStyle(color: Colors.green),),
+
         content: const Text(
-          'TreeGuard helps you protect and manage trees in your community. '
+          'TreeGuard helps you protect and manage trees in your community.'
           'Choose your role to get started with the appropriate features.',
+          style: TextStyle(color: Colors.green),
         ),
         actions: [
           TextButton(

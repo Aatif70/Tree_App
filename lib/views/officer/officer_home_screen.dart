@@ -4,6 +4,11 @@ import 'package:tree_app/constants/app_theme.dart';
 import 'package:tree_app/utils/widgets.dart';
 import 'package:tree_app/view_models/auth_view_model.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:tree_app/views/officer/tree_applications_screen.dart';
+import 'package:tree_app/views/officer/plantation_verification_screen.dart';
+import 'package:tree_app/views/officer/tree_map_screen.dart';
+import 'package:tree_app/views/officer/reports_violations_screen.dart';
+
 
 class OfficerHomeScreen extends StatefulWidget {
   const OfficerHomeScreen({Key? key}) : super(key: key);
@@ -86,7 +91,7 @@ class _OfficerHomeScreenState extends State<OfficerHomeScreen> {
                 ),
                 const SizedBox(height: 24),
                 Text(
-                  'Welcome, Officer of Green Zones 🌿',
+                  'Welcome, $userName 🌿',
                   style: AppTheme.headingStyle.copyWith(
                     color: AppTheme.white,
                     fontSize: 24,
@@ -103,6 +108,10 @@ class _OfficerHomeScreenState extends State<OfficerHomeScreen> {
           ),
         ],
       ),
+
+
+
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) {
@@ -145,6 +154,12 @@ class _OfficerHomeScreenState extends State<OfficerHomeScreen> {
     );
   }
 
+
+
+
+
+
+
   Widget _buildHomeContent() {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(20),
@@ -167,7 +182,12 @@ class _OfficerHomeScreenState extends State<OfficerHomeScreen> {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {
-                _showFeatureNotImplemented('Start Reviewing');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TreeApplicationsScreen(),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppTheme.darkGreen,
@@ -201,7 +221,12 @@ class _OfficerHomeScreenState extends State<OfficerHomeScreen> {
           icon: Icons.folder_outlined,
           color: AppTheme.lightGreen,
           onTap: () {
-            _showFeatureNotImplemented('Review Applications');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const TreeApplicationsScreen(),
+              ),
+            );
           },
         ),
         ActionCard(
@@ -209,7 +234,12 @@ class _OfficerHomeScreenState extends State<OfficerHomeScreen> {
           icon: Icons.location_on_outlined,
           color: AppTheme.softGreen,
           onTap: () {
-            _showFeatureNotImplemented('View Map');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const TreeMapScreen(),
+              ),
+            );
           },
         ),
         ActionCard(
@@ -217,7 +247,12 @@ class _OfficerHomeScreenState extends State<OfficerHomeScreen> {
           icon: Icons.camera_alt_outlined,
           color: AppTheme.softGreen,
           onTap: () {
-            _showFeatureNotImplemented('Validate Proofs');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const PlantationVerificationScreen(),
+              ),
+            );
           },
         ),
         ActionCard(
@@ -225,7 +260,12 @@ class _OfficerHomeScreenState extends State<OfficerHomeScreen> {
           icon: Icons.warning_amber_outlined,
           color: AppTheme.lightGreen,
           onTap: () {
-            _showFeatureNotImplemented('View Reports');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ReportsViolationsScreen(),
+              ),
+            );
           },
         ),
       ],
